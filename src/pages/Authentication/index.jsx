@@ -33,7 +33,7 @@ const Authentication = () => {
             lineHeight="1"
             fontSize={{ base: "3xl", sm: "4xl", md: "5xl", lg: "6xl" }}
             as="span"
-            bgGradient="linear(to-r, red.400, pink.400)"
+            bgGradient="linear(to-r, green.400, blue.400)"
             bgClip="text"
           >
             {" "}
@@ -48,13 +48,14 @@ const Authentication = () => {
           </Heading>
           <Stack direction="row" spacing={4} align="center">
             <ProfileAuthentication />
-            <Text fontFamily="heading" fontSize={{ base:"4xl", md:"6xl" }}>
+            <Text fontFamily="heading" fontWeight="bold" fontSize={{ base:"4xl", md:"6xl" }}>
             +
             </Text>
             <Flex
             align="center"
             justify="center"
             fontFamily="heading"
+            fontWeight="bold"
             fontSize={{ base:"sm", md:"lg" }}
             bg="gray.800"
             color="white"
@@ -68,7 +69,7 @@ const Authentication = () => {
                 height: "full",
                 rounded: "full",
                 transform: "scale(1.125)",
-                bgGradient: "linear(to-bl, orange.400, yellow.400)",
+                bgGradient: "linear(to-bl, green.400, blue.400)",
                 position: "absolute",
                 zIndex: -1,
                 top: 0,
