@@ -21,24 +21,22 @@ import {
   const NavBarItem = () => {
       return (
         <Box 
-        bgGradient="linear(to-r, gray.400, gray.200)" 
+        bgColor="gray.200" 
         px={5}
         position="-webkit-sticky"
         >
-        <Flex h={16} alignItems="center" justifyContent="space-between">
-            <HStack spacing={6} alignItems="center">
-            <Icon boxSize={6} as={SiConfluence}></Icon>
-            </HStack>
-            <HStack  spacing={6} alignItems="center">
+        <Flex h={10} alignItems="center" justifyContent="space-between">
+            <HStack  spacing={0} alignItems="center">
+                <Icon marginRight="8" boxSize={4} as={SiConfluence}></Icon>
                 <Box
                 color="black"
                 as={Button}
                 variant="string"
                 cursor="pointer"
                 minW={0}
-                fontWeight="bold"
+                fontWeight="900px"
                 _hover={{
-                    background: "gray.100",
+                    background: "gray.300",
                 }}
                 >Home</Box>
                 <Box
@@ -47,24 +45,25 @@ import {
                 variant="flex"
                 cursor="pointer"
                 minW={0}
-                fontWeight="bold"
+                fontWeight="900px"
                 _hover={{
-                    background: "gray.100",
+                    background: "gray.300",
                 }}
                 >Explore</Box>
                 <Box
                 color="black"
                 as={Button}
-                variant="subtle"
+                variant="flex"
                 cursor="pointer"
                 minW={0}
-                fontWeight="bold"
+                fontWeight="900px"
                 _hover={{
-                    background: "gray.100",
+                    background: "gray.300",
                 }}
-                >Menu 3</Box>
+                >Menu3</Box>
             </HStack>
             <Flex alignItems="center">
+            <Input bg="gray.400" height={6} width={200}></Input>
                 <Menu>
                     <MenuButton
                     as={Button}
@@ -73,7 +72,7 @@ import {
                     minW={0}
                     >
                     <Avatar 
-                    size="md"
+                    size="sm"
                     src="https://pbs.twimg.com/profile_images/998482729892069377/Ls1MMr3q_400x400.jpg"
                     />
                     </MenuButton>
