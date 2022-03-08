@@ -12,45 +12,63 @@ import {
     Avatar,
     MenuList,
     MenuItem,
-    Icon
+    Icon,
+    Input,
+    background,
   } from "@chakra-ui/react";
   import { SiConfluence } from 'react-icons/si'
 
   const NavBarItem = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-      
       return (
         <Box 
         bgGradient="linear(to-r, gray.400, gray.200)" 
         px={5}
+        position="-webkit-sticky"
         >
         <Flex h={16} alignItems="center" justifyContent="space-between">
+            <HStack spacing={6} alignItems="center">
+            <Icon boxSize={6} as={SiConfluence}></Icon>
+            </HStack>
             <HStack  spacing={6} alignItems="center">
-                <Icon boxSize={6} as={SiConfluence}></Icon>
                 <Box
                 color="black"
                 as={Button}
-                rounded="full"
-                variant="link"
+                variant="string"
                 cursor="pointer"
                 minW={0}
                 fontWeight="bold"
+                _hover={{
+                    background: "gray.100",
+                }}
                 >Home</Box>
                 <Box
                 color="black"  
                 as={Button}
-                rounded="full"
-                variant="link"
+                variant="flex"
                 cursor="pointer"
                 minW={0}
-                fontWeight="bold">Explore</Box>
+                fontWeight="bold"
+                _hover={{
+                    background: "gray.100",
+                }}
+                >Explore</Box>
+                <Box
+                color="black"
+                as={Button}
+                variant="subtle"
+                cursor="pointer"
+                minW={0}
+                fontWeight="bold"
+                _hover={{
+                    background: "gray.100",
+                }}
+                >Menu 3</Box>
             </HStack>
             <Flex alignItems="center">
                 <Menu>
                     <MenuButton
                     as={Button}
-                    rounded="full"
-                    variant="link"
+                    variant="flex"
                     cursor="pointer"
                     minW={0}
                     >

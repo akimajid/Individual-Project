@@ -44,26 +44,31 @@ const Authentication = () => {
               bgClip="text"
             >
               &
-            </Text>{" "} Find Your Passion
+            </Text>{" "}
+            Find Your Passion
           </Heading>
           <Stack direction="row" spacing={4} align="center">
             <ProfileAuthentication />
-            <Text fontFamily="heading" fontWeight="bold" fontSize={{ base:"4xl", md:"6xl" }}>
-            +
+            <Text
+              fontFamily="heading"
+              fontWeight="bold"
+              fontSize={{ base: "4xl", md: "6xl" }}
+            >
+              +
             </Text>
             <Flex
-            align="center"
-            justify="center"
-            fontFamily="heading"
-            fontWeight="bold"
-            fontSize={{ base:"sm", md:"lg" }}
-            bg="gray.800"
-            color="white"
-            rounded="full"
-            width={useBreakpointValue({ base:"44px", md:"60px" })}
-            height={useBreakpointValue({ base:"44px", md:"60px" })}
-            position="relative"
-            _before={{
+              align="center"
+              justify="center"
+              fontFamily="heading"
+              fontWeight="bold"
+              fontSize={{ base: "sm", md: "lg" }}
+              bg="gray.800"
+              color="white"
+              rounded="full"
+              width={useBreakpointValue({ base: "44px", md: "60px" })}
+              height={useBreakpointValue({ base: "44px", md: "60px" })}
+              position="relative"
+              _before={{
                 content: "''",
                 width: "full",
                 height: "full",
@@ -74,10 +79,80 @@ const Authentication = () => {
                 zIndex: -1,
                 top: 0,
                 left: 0,
-            }}
-            >YOU
+              }}
+            >
+              YOU
             </Flex>
           </Stack>
+        </Stack>
+        <Stack bg="gray.50" rounded="xl" p={{ base: 4, sm: 6, md: 8 }}>
+          <Stack spacing="4">
+            <Heading
+              color="gray.800"
+              lineHeight={1.1}
+              fontSize={{ base: "2xl", sm: "3xl", md: "4xl" }}
+            >
+              Sign Up For Free !
+            </Heading>
+            <Text color="gray.500" fontSize={{ base: "sm", sm: "md" }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus, sequi in? Autem, adipisci eos perferendis
+              accusantium odit cumque. Autem culpa molestias reiciendis id odit
+              quia.
+            </Text>
+          </Stack>
+          <Box as="form" mt={10}>
+            <Stack spacing={4}>
+            <Input
+                placeholder="Your Name"
+                bg="gray.100"
+                border={0}
+                color="gray.500"
+                _placeholder={{
+                  color: "gray.500",
+                }}
+              />
+              <Input
+                placeholder="User Name"
+                bg="gray.100"
+                border={0}
+                color="gray.500"
+                _placeholder={{
+                  color: "gray.500",
+                }}
+              />
+              <Input
+                placeholder="Email Address"
+                bg="gray.100"
+                border={0}
+                color="gray.500"
+                _placeholder={{
+                  color: "gray.500",
+                }}
+              />
+              <Input
+                placeholder="Phone Number"
+                bg="gray.100"
+                border={0}
+                color="gray.500"
+                _placeholder={{
+                  color: "gray.500",
+                }}
+              />
+              <Button 
+              fontFamily="heading" 
+              bg="gray.200" 
+              color="white"
+              bgGradient="linear(to-r, green.400, blue.400)"
+              _hover={{
+                bgGradient: "linear(to-r, green.400, blue.400)",
+                boxShadow: "xl"
+              }}
+              >
+                Register
+              </Button>
+            </Stack>
+          </Box>
         </Stack>
       </Container>
     </Box>
