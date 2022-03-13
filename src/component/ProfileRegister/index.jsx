@@ -1,6 +1,6 @@
 import { Avatar, AvatarGroup, useBreakpointValue } from "@chakra-ui/react";
 
-const ProfileAuthentication = () => {
+const ProfileRegister = () => {
   return (
     <>
       <AvatarGroup>
@@ -105,4 +105,4 @@ const ProfileAuthentication = () => {
   );
 };
 
-export default ProfileAuthentication;
+export default ProfileRegister;

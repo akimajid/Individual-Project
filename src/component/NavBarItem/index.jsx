@@ -63,7 +63,7 @@ import {
                 >Menu3</Box>
             </HStack>
             <Flex alignItems="center">
-            <Input bg="gray.400" height={6} width={200}></Input>
+            <Input fontSize="12px" bg="gray.400" height={6} width={200}></Input>
                 <Menu>
                     <MenuButton
                     as={Button}
