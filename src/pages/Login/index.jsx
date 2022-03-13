@@ -8,23 +8,27 @@ import {
     Link,
     InputGroup,
     InputRightElement,
+    Center
   } from "@chakra-ui/react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons"
 import { useState } from "react"
 
-const RightSectionRegister = () => {
-  const [showPassword, setShowPassword] = useState(false) 
 
+
+const Login = () => {
+    const [showPassword, setShowPassword] = useState(false)
 
     return (
-        <Stack bg="gray.50" rounded="xl" p={{ base: 4, sm: 6, md: 8 }}>
+        <Center bgGradient="linear(to-r, gray.200, gray.400)" position="flex" >
+            <Box width="xl" margin="28" >
+            <Stack bg="gray.50" rounded="xl" p={{ base: 4, sm: 6, md: 8 }}>
           <Stack spacing="4" marginBottom={8}>
             <Heading
               color="gray.800"
               lineHeight={1.1}
               fontSize={{ base: "2xl", sm: "3xl", md: "4xl" }}
             >
-              <Text as="span">Sign Up For Free </Text>
+              <Text as="span">Sign in to your account </Text>
               <Text
                 as="span"
                 bgGradient="linear(to-r, green.400, blue.400)"
@@ -51,15 +55,6 @@ const RightSectionRegister = () => {
                   color: "gray.500",
                 }}
               />
-              <Input
-                placeholder="Email Address"
-                bg="gray.100"
-                border={0}
-                color="black"
-                _placeholder={{
-                  color: "gray.500",
-                }}
-              />
               <InputGroup> 
               <Input
                 placeholder="Password"
@@ -78,12 +73,12 @@ const RightSectionRegister = () => {
               </InputRightElement>
               </InputGroup>
               <Text as="span" textAlign="center">
-                <Text as="span">Already have account ? {" "}</Text>
+                <Text as="span">Don't have an account ? {" "}</Text>
                 <Link
-                href="/login"
+                href="/register"
                  color="blue.300"
                 >
-                  login here
+                  Sign Up here
                 </Link>
               </Text>
               <Button
@@ -97,12 +92,14 @@ const RightSectionRegister = () => {
                   color: "black",
                 }}
               >
-                Sign Up
+                Sign In
               </Button>
             </Stack>
           </Box>
         </Stack>
+            </Box>
+        </Center>
     )
 }
 
-export default RightSectionRegister
+export default Login
