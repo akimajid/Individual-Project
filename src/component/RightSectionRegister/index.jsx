@@ -6,9 +6,16 @@ import {
     Text,
     Button,
     Link,
+    InputGroup,
+    InputRightElement,
   } from "@chakra-ui/react";
+import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons"
+import { useState } from "react"
 
 const RightSectionRegister = () => {
+  const [showPassword, setShowPassword] = useState(false) 
+
+
     return (
         <Stack bg="gray.50" rounded="xl" p={{ base: 4, sm: 6, md: 8 }}>
           <Stack spacing="4" marginBottom={8}>
@@ -53,16 +60,23 @@ const RightSectionRegister = () => {
                   color: "gray.500",
                 }}
               />
+              <InputGroup> 
               <Input
-                type="password"
                 placeholder="Password"
                 bg="gray.100"
-                border={0}
-                color="black"
+                type={showPassword ? "text" : "password"}
                 _placeholder={{
                   color: "gray.500",
                 }}
               />
+              <InputRightElement h="full">
+                <Button
+                variant="ghost"
+                onClick={() => setShowPassword((showPassword) => !showPassword)}
+                > {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                </Button>
+              </InputRightElement>
+              </InputGroup>
               <Text as="span" textAlign="center">
                 <Text as="span">Already have account ? {" "}</Text>
                 <Link
@@ -82,7 +96,7 @@ const RightSectionRegister = () => {
                   color: "black",
                 }}
               >
-                Register
+                Sign Up
               </Button>
             </Stack>
           </Box>
